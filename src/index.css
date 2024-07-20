@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --clr-purple-1: #6a35ff;
+  --clr-purple-2: #7f93ff;
+  --clr-purple-3: #6881ff;
+  --clr-white-1: #ffffff;
+  --clr-white-2: #e4e6f2;
+  --clr-white-3: #c0c2cc;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-mask {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@layer base {
+  body {
+    @apply font-outfit w-full min-h-[100dvh] bg-[#151515] bg-hero-pattern bg-cover bg-center overflow-x-hidden;
+  }
+}
